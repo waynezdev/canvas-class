@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ColourSelector from "./ColourSelector"
 
 class App extends Component {
 
@@ -8,6 +9,7 @@ class App extends Component {
 
             <div>
                 <h1>Welcome to your drawing Pad!</h1>
+                <ColourSelector hex="#f4424b" />
             </div>
         )
     }
