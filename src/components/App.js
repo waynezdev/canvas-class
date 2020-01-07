@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ColourSelector from "./ColourSelector"
+import Canvas from "./Canvas";
 
 class App extends Component {
 
