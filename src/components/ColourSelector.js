@@ -2,9 +2,16 @@ import React, { Component } from "react";
 
 class ColourSelector extends Component {
 
+    state = { hex: this.props.hex}
+
+    onInputChange = (event) => {
+        console.log(event.target)
+        this.setState({hex: event.target.value});
+    }
+
     render() {
 
-        const { hex } = this.props; //destructure hex from parent propertys 
+        const { hex } = this.state; //destructure hex from parent propertys 
         //so you dont have to keep using this.props.hex
 
         // const { hex = "#ffffff" } = this.props;
@@ -12,17 +19,20 @@ class ColourSelector extends Component {
         //when render runs
         
         return (
-            <input type="color" defaultValue={this.props.hex}   />
+            <>
+            <input type="color" value={hex} onChange={this.onInputChange}  />
+            </>
             );
+           
        
         }
         
 
     
 
-static defaultProps = {
-    hex: "#ffffff"
-}
+    static defaultProps = {
+        hex: "#ffff0f"
+    };
 //needs to be inside of class 
 //same as "A" way with syntactical sugar
 
@@ -34,7 +44,7 @@ static defaultProps = {
 //     hex: "#ffffff"
 // }
 
-// "A" way of setting default value
+// the "A" way of setting default value
 //needs to be outside of class
 
     export default ColourSelector

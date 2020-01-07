@@ -9,8 +9,10 @@ class App extends Component {
 
             <div>
                 <h1>Welcome to your drawing Pad!</h1>
-                <ColourSelector hex="#f4424b" />
+                <ColourSelector  />
             </div>
-        )
+        );
     }
 }
+
+export default App
